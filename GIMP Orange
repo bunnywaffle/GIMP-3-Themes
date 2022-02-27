@@ -1,1 +1,244 @@
+/* GIMP theme css file */
+
+* {
+    -gtk-icon-style:                   symbolic;
+    -GimpDockWindow-default-height:    300;
+    -GimpMenuDock-minimal-width:       200;
+    -GimpDockWindow-menu-preview-size: button;
+    -GimpToolPalette-tool-icon-size:   large-toolbar;
+    -GimpToolPalette-button-relief:    none;
+    -GimpDockbook-tab-icon-size:       button;
+    -GimpColorNotebook-tab-icon-size:  button;
+    -GimpDeviceEditor-handle-size:     12;
+    -GimpDockable-content-border:      2;
+    -GimpEditor-content-spacing:       2;
+    -GimpEditor-button-spacing:        2;
+    -GimpEditor-button-icon-size:      menu;
+    -GimpDataEditor-minimal-height:    96;
+    -GtkDialog-content-area-border:    0;
+    -GtkDialog-button-spacing:         6;
+    -GtkDialog-action-area-border:     12;
+    -GimpUnitComboBox-appears-as-list: 0;
+}
+
+GimpToolDialog {
+    -GtkDialog-action-area-border: 6;
+}
+
+GimpColorNotebook tab {
+    padding: 0 0 0 0;
+}
+
+GimpDock GimpColorNotebook spinbutton,
+GimpDock GimpColorNotebook spinbutton entry,
+GimpDock GimpColorScales spinbutton,
+GimpDock GimpColorScales spinbutton entry {
+    min-height: 0;
+}
+
+GimpColorSelection ColorselCmyk {
+    padding: 2px 2px 2px 2px;
+}
+
+GimpColorHistory button {
+    padding: 3px 3px 3px 3px;
+}
+
+#gimp-color-tag-box button {
+    padding: 4px 6px 4px 6px;
+}
+
+tab GimpFgBgView {
+    padding: 6px 6px 6px 6px;
+}
+
+GimpFgBgEditor:active {
+    border-width: 2px 2px 2px 2px;
+}
+
+GimpDock {
+    font-size: smaller;
+}
+
+GimpDock notebook tab {
+    padding: 0 0 0 0;
+}
+
+GimpDock :not(toolbutton) > button,
+GimpOverlayDialog button,
+GimpToolDialog :not(headerbar) button,
+GimpTextStyleEditor button {
+    padding: 0px 2px 0px 2px;
+}
+
+GimpToolDialog headerbar {
+    min-height: 0;
+}
+
+GimpToolDialog headerbar button {
+    padding: 2px 2px 2px 2px;
+}
+
+GimpDock frame {
+    -GimpFrame-label-bold:       0;
+    -GimpFrame-label-spacing:    2;
+}
+
+GimpDisplayShell grid > button {
+    min-height: 0;
+    min-width: 0;
+    padding: 0 0 0 0;
+}
+
+GimpDisplayShell combobox entry {
+    font-size: smaller;
+}
+
+GimpDisplayShell combobox button {
+    font-size: smaller;
+}
+
+GimpDisplayShell progressbar text {
+    font-size: larger;
+}
+
+GimpDisplayShell progressbar trough,
+GimpDisplayShell progressbar progress {
+    min-height: 1em;
+}
+
+GimpFileDialog progressbar trough,
+GimpFileDialog progressbar progress {
+    min-width: 1px; /* hack */
+    min-height: 1em;
+}
+
+GimpRuler {
+    font-size: smaller;
+}
+
+GimpSpinScale entry {
+    /* Important: prevent overhigh spin scale */
+    min-height: 16px;
+}
+
+GimpSpinScale entry progress {
+    background-color: @theme_selected_bg_color;
+    border-width:     0px;
+    border-radius:    3px;
+}
+
+GimpSpinScale button {
+    /* Makes the +- buttons a bit more compact. */
+    padding: 0 1px 0 1px;
+}
+
+entry.italic {
+    font-style: italic;
+}
+
+.grid {
+    background-color: #281609;
+}
+
+treeview {
+background-color: #281609;
+}
+
+treeview header button {
+    padding: 6px;
+}
+
+treeview .toggle-icon:not(.visible):hover {
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+treeview .toggle-icon:not(.visible):selected {
+    border-color: lightgray;
+}
+
+
+box {
+background-color: #281609;
+}
+
+
+grid {
+background-color: #281609;
+}
+
+separator {
+background-color: #281609;
+}
+
+
+treeview {
+background-color: #281609;
+}
+
+menu {
+background-color: #281609;
+}
+
+
+header {
+background-color: #281609;
+}
+
+
+tabs {
+background-color: #281609;
+}
+
+stack {
+background-color: #281609;
+}
+
+GimpSpinScale {
+background-color: #281609;
+}
+
+menu menuitem:hover,
+.menu menuitem:hover {
+     background-color: #9252ff;
+}
+
+toolbutton {
+background-color: #281609;
+}
+
+@define-color theme_selected_bg_color #ffa43c;
+
+
+menubar {
+background-color: #4d2f15;
+}
+
+scrollbar {
+background-color: #3f2b12;
+
+}
+
+checkbutton {
+
+color: #fcba53;
+
+}
+
+button {
+color: #ffdcaa;
+background-color: #281609;
+
+}
+
+
+GimpDock {
+
+color: #ffdcaa;
+
+
+}
+
+
 
