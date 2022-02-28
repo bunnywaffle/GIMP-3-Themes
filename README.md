@@ -4,7 +4,7 @@ Deep Black
 
 ![image](https://user-images.githubusercontent.com/100540808/155973246-6dd89aa0-983d-45d4-87de-ed5d8761ef54.png)
 
-Light Orage
+Light Orange
 
 ![image](https://user-images.githubusercontent.com/100540808/155973330-cd3520aa-e8e7-4d91-8434-7ee36cc5083c.png)
 
