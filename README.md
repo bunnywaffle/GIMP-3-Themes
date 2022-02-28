@@ -8,6 +8,11 @@ Light Orange
 
 ![image](https://user-images.githubusercontent.com/100540808/155973330-cd3520aa-e8e7-4d91-8434-7ee36cc5083c.png)
 
+Deep Blue
+
+![image](https://user-images.githubusercontent.com/100540808/156065844-6006f3cc-9db0-42bf-a9a5-28772c079773.png)
+
+
 Gray Green
 
 ![image](https://user-images.githubusercontent.com/100540808/155973403-e8848590-aae4-4ff6-bf27-d1a598b2a458.png)
