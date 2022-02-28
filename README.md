@@ -18,7 +18,7 @@ Gray Green
 ![image](https://user-images.githubusercontent.com/100540808/155973403-e8848590-aae4-4ff6-bf27-d1a598b2a458.png)
 
 
-How to install
+<h3 style="text-align: left;">&nbsp;How To Install</h3>
 
 First, download any of the.css files.
 
