@@ -37,3 +37,9 @@ Then Create a new file in the themes folder with whatever name you like.
 ![image](https://user-images.githubusercontent.com/100540808/155974530-5cd77538-6e4d-40b3-b7e2-45821bc52e2b.png)
 
 Then, in the newly created folder, paste the.css file.
+
+Then rename the .css file to gimp
+
+![New Project (12)](https://user-images.githubusercontent.com/100540808/156333597-25be839a-fff7-444b-af39-c0c9fb2ef3c1.png)
+
+
