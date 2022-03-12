@@ -17,6 +17,11 @@ Gray Green
 
 ![image](https://user-images.githubusercontent.com/100540808/155973403-e8848590-aae4-4ff6-bf27-d1a598b2a458.png)
 
+Resolve Black
+
+![image](https://user-images.githubusercontent.com/100540808/158034116-83f70f98-7271-46a6-a5cd-98cc785f68f7.png)
+
+
 
 <h3 style="text-align: left;">&nbsp;How To Install</h3>
 
