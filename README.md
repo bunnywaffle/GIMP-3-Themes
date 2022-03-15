@@ -21,6 +21,11 @@ Resolve Black
 
 ![image](https://user-images.githubusercontent.com/100540808/158034116-83f70f98-7271-46a6-a5cd-98cc785f68f7.png)
 
+Photoshop Black
+
+![image](https://user-images.githubusercontent.com/100540808/158363827-38d77bde-fe84-48fa-a374-f4140b3fbd65.png)
+
+
 
 
 <h3 style="text-align: left;">&nbsp;How To Install</h3>
