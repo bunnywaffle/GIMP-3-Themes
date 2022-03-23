@@ -1,5 +1,15 @@
 # GIMP-3-Themes
 
+Photoshop Black v2
+
+![image](https://user-images.githubusercontent.com/100540808/159771612-b2fa84e8-0f4b-4ebb-b303-2c86a499089d.png)
+
+Affinity Photo Black
+
+![image](https://user-images.githubusercontent.com/100540808/159771860-969cffb8-d09d-4f25-b8e6-6c165405f1b0.png)
+
+
+
 Deep Black
 
 ![image](https://user-images.githubusercontent.com/100540808/155973246-6dd89aa0-983d-45d4-87de-ed5d8761ef54.png)
