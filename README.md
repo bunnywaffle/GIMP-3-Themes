@@ -40,26 +40,22 @@ Photoshop Black
 
 <h3 style="text-align: left;">&nbsp;How To Install</h3>
 
-First, download any of the.css files.
 
-![image](https://user-images.githubusercontent.com/100540808/155973630-63f51c6d-2dcc-4a2b-85c1-a3521ce4d7ae.png)
+First Download the latest released GIMP 3 Theme file
 
-Then navigate to the gimp's preference.
+![image](https://user-images.githubusercontent.com/100540808/179615987-d37b5ea0-b7fe-49fe-a601-2867112adbdb.png)
 
-![image](https://user-images.githubusercontent.com/100540808/155973875-16ccd4eb-9df0-4f01-a287-92acf0bc43c6.png)
+Then Extract The file.
 
-Then, in the file manager, select Show File Location.
+Then Find the GIMP Theme folder
 
-![image](https://user-images.githubusercontent.com/100540808/155974274-cde14233-cab0-4ad6-94b6-a9541694c7db.png)
+![image](https://user-images.githubusercontent.com/100540808/179616646-017a69e2-70f7-4751-a091-1385b8adb1ac.png)
 
-Then Create a new file in the themes folder with whatever name you like.
+Then Paste the extracted gimp theme file to the gimp theme folder
 
-![image](https://user-images.githubusercontent.com/100540808/155974530-5cd77538-6e4d-40b3-b7e2-45821bc52e2b.png)
+![image](https://user-images.githubusercontent.com/100540808/179616954-09518674-4856-4c67-9262-0061ca6ac42a.png)
 
-Then, in the newly created folder, paste the.css file.
 
-Then rename the .css file to gimp
 
-![New Project (12)](https://user-images.githubusercontent.com/100540808/156333597-25be839a-fff7-444b-af39-c0c9fb2ef3c1.png)
 
 
