@@ -41,11 +41,12 @@ Photoshop Black
 <h3 style="text-align: left;">&nbsp;How To Install</h3>
 
 
-First Download the latest released GIMP 3 Theme file (GIMP-3-Themes-main.rar)
+First, download the latest released GIMP 3 theme file (GIMP-3-Themes-main.rar) or download the whole codebase.
 
 Download Link: https://github.com/sujeet-project/GIMP-3-Themes/releases/download/Themes/GIMP-3-Themes-main.rar
 
-![image](https://user-images.githubusercontent.com/100540808/179615987-d37b5ea0-b7fe-49fe-a601-2867112adbdb.png)
+![image](https://user-images.githubusercontent.com/100540808/182044363-7cade384-0527-4662-babe-948d951059c6.png)
+
 
 Then Extract The file.
 
