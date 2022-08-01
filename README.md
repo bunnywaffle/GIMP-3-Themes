@@ -14,14 +14,6 @@ GrayRed
 ![image](https://user-images.githubusercontent.com/100540808/182186988-77d3c078-8ab8-4007-887f-6df17556dac8.png)
 
 
-Deep Black
-
-![image](https://user-images.githubusercontent.com/100540808/155973246-6dd89aa0-983d-45d4-87de-ed5d8761ef54.png)
-
-Light Orange
-
-![image](https://user-images.githubusercontent.com/100540808/155973330-cd3520aa-e8e7-4d91-8434-7ee36cc5083c.png)
-
 Deep Blue
 
 ![image](https://user-images.githubusercontent.com/100540808/156065844-6006f3cc-9db0-42bf-a9a5-28772c079773.png)
