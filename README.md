@@ -9,6 +9,10 @@ Affinity Photo Black
 ![image](https://user-images.githubusercontent.com/100540808/159771860-969cffb8-d09d-4f25-b8e6-6c165405f1b0.png)
 
 
+GrayRed
+
+![image](https://user-images.githubusercontent.com/100540808/182186988-77d3c078-8ab8-4007-887f-6df17556dac8.png)
+
 
 Deep Black
 
