@@ -3,11 +3,11 @@
 
 
 /* Color */
-/* If you want to chnage the theme color the just chnage hex value of this code below */
+/* If you want to change the theme color, just change the hex value of this code below. */
 
 @define-color main_color #333333;
 
-/* if you want to chnage Slider gradiant color then chnage the hex value of both of the color hex below */
+/* If you want to change the slider gradient color, then change the hex value of both of the color hex below. */
 
 @define-color slider_col1 #ff581a;
 @define-color slider_col2 #b00b69;
