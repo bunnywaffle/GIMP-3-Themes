@@ -45,7 +45,7 @@ Photoshop Black
 
 First, download the latest released GIMP 3 theme file (GIMP-3-Themes-main.rar) or download the whole codebase.
 
-Download Link: https://github.com/sujeet-project/GIMP-3-Themes/releases/download/Themes/GIMP-3-Themes-main.rar
+Download Link: https://github.com/bunnywaffle/GIMP-3-Themes/releases/tag/Themes
 
 ![image](https://user-images.githubusercontent.com/100540808/182044363-7cade384-0527-4662-babe-948d951059c6.png)
 
