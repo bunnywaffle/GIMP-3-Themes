@@ -1,5 +1,11 @@
 # GIMP-3-Themes
 
+
+Dark Blue v2
+
+![image](https://user-images.githubusercontent.com/100540808/182626796-11160736-38b3-4d91-9a60-1a3bfc33ace0.png)
+
+
 Photoshop Black v2
 
 ![image](https://user-images.githubusercontent.com/100540808/159771612-b2fa84e8-0f4b-4ebb-b303-2c86a499089d.png)
