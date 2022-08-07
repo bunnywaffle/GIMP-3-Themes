@@ -1,0 +1,515 @@
+/* GIMP theme css file */
+
+
+
+/* Color */
+/* If you want to chnage the theme color the just chnage hex value of this code below */
+
+@define-color main_color #ffffff;
+
+/* if you want to chnage Slider gradiant color then chnage the hex value of both of the color hex below */
+/* slider selection colors are gradiant, so change both colors if you want a gradiant effect, and if you want it to be a single color, set the same hex value on both. */
+
+
+@define-color slider_col1 #4f9cfa;
+@define-color slider_col2 #337af6;
+
+/* Layer slection color */
+/* Layer selection colors are gradiant, so change both colors if you want a gradiant effect, and if you want it to be a single color, set the same hex value on both. */
+
+@define-color layer_selcol #4f9cfa;
+@define-color layer_selcol2 #337af6;
+
+
+/* Canvas color */
+
+@define-color canvas_col #dcdcdc;
+
+
+/* Scrollbar BG color */
+
+@define-color scrollbar_col #ffffff;
+
+/* Scrollbar color */
+
+@define-color scrollbarbg_col #dcdcdc;
+
+/* Border color */
+
+@define-color border_col #cdc7c2;
+
+
+/* Ruler color (Bg = background) */
+
+@define-color ruler_col #5b5b68;
+@define-color rulerbg_col #dcdcdc;
+
+
+/* Menu Bar Color */
+
+@define-color menubarcol #f4f5f6;
+
+/* Tool Slected tool Color */
+
+@define-color toolboxcol #8abcfa;
+
+/* SEPARATOR Color */
+
+@define-color separator #eeeff0;
+
+/* Text and icon */
+
+@define-color texnicon #424242;
+
+
+
+
+
+/* ALL */
+
+* {
+    -gtk-icon-style:                   symbolic;
+    -GimpDockWindow-default-height:    300;
+    -GimpMenuDock-minimal-width:       200;
+    -GimpDockWindow-menu-preview-size: button;
+    -GimpToolPalette-tool-icon-size:   large-toolbar;
+    -GimpToolPalette-button-relief:    none;
+    -GimpDockbook-tab-icon-size:       button;
+    -GimpColorNotebook-tab-icon-size:  button;
+    -GimpDeviceEditor-handle-size:     12;
+    -GimpDockable-content-border:      2;
+    -GimpEditor-content-spacing:       2;
+    -GimpEditor-button-spacing:        2;
+    -GimpEditor-button-icon-size:      menu;
+    -GimpDataEditor-minimal-height:    96;
+    -GtkDialog-content-area-border:    0;
+    -GtkDialog-button-spacing:         6;
+    -GtkDialog-action-area-border:     12;
+    -GimpUnitComboBox-appears-as-list: 0;
+}
+
+GimpToolDialog {
+    -GtkDialog-action-area-border: 6;
+}
+
+GimpColorNotebook tab {
+    padding: 0 0 0 0;
+}
+
+GimpDock GimpColorNotebook spinbutton,
+GimpDock GimpColorNotebook spinbutton entry,
+GimpDock GimpColorScales spinbutton,
+GimpDock GimpColorScales spinbutton entry {
+    min-height: 0;
+}
+
+GimpColorSelection ColorselCmyk {
+    padding: 2px 2px 2px 2px;
+}
+
+GimpColorHistory button {
+    padding: 3px 3px 3px 3px;
+}
+
+#gimp-color-tag-box button {
+    padding: 4px 6px 4px 6px;
+}
+
+tab GimpFgBgView {
+    padding: 6px 6px 6px 6px;
+}
+
+GimpFgBgEditor:active {
+    border-width: 2px 2px 2px 2px;
+}
+
+GimpDock {
+    font-size: smaller;
+}
+
+GimpDock notebook tab {
+    padding: 0 0 0 0;
+}
+
+GimpDock :not(toolbutton) > button,
+GimpOverlayDialog button,
+GimpToolDialog :not(headerbar) button,
+GimpTextStyleEditor button {
+    padding: 0px 2px 0px 2px;
+}
+
+GimpToolDialog headerbar {
+    min-height: 0;
+}
+
+GimpToolDialog headerbar button {
+    padding: 2px 2px 2px 2px;
+}
+
+GimpDock frame {
+    -GimpFrame-label-bold:       0;
+    -GimpFrame-label-spacing:    2;
+}
+
+GimpDisplayShell grid > button {
+    min-height: 0;
+    min-width: 0;
+    padding: 0 0 0 0;
+}
+
+GimpDisplayShell combobox entry {
+    font-size: smaller;
+}
+
+GimpDisplayShell combobox button {
+    font-size: smaller;
+}
+
+GimpDisplayShell progressbar text {
+    font-size: larger;
+}
+
+GimpDisplayShell progressbar trough,
+GimpDisplayShell progressbar progress {
+    min-height: 1em;
+}
+
+GimpFileDialog progressbar trough,
+GimpFileDialog progressbar progress {
+    min-width: 1px; /* hack */
+    min-height: 1em;
+}
+
+
+GimpRuler {
+
+ color: @ruler_col;
+ background-color: @rulerbg_col;
+    
+}
+
+
+GimpSpinScale entry {
+    /* Important: prevent overhigh spin scale */
+    min-height: 16px;
+}
+
+/************/
+/* Slider */
+/************/
+
+GimpSpinScale entry progress {
+
+    background-image: -gtk-gradient (linear, left top, right top,
+                                         from (@slider_col1),
+                                         to (@slider_col2));
+    
+        border-width:     0px;
+        border-radius:    4px;
+    
+    }
+    
+
+GimpSpinScale button {
+    /* Makes the +- buttons a bit more compact. */
+    padding: 0 1px 0 1px;
+}
+
+
+/* End */
+
+
+entry.italic {
+    font-style: italic;
+}
+
+.grid {
+    background-color: @main_color;
+}
+
+
+/************/
+/* TREEVIEW */
+/************/
+
+treeview {
+background-color: @main_color;
+}
+
+treeview header button {
+    padding: 6px;
+}
+
+treeview .toggle-icon:not(.visible):hover {
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+treeview .toggle-icon:not(.visible):selected {
+    border-color: lightgray;
+}
+
+treeview {
+    transition:all 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    color: @texnicon;
+    border:0.3px solid;
+    border-radius:2.2px;
+    background-color:#ffffff;
+    background-image: none;
+    border-color: #eeeff0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+
+treeview.view:selected,
+treeview.view:selected:focus {
+    background-image: -gtk-gradient (linear, left top, right top,
+                                         from (@layer_selcol),
+                                         to (@layer_selcol2));
+    border-radius: 0;
+
+}
+
+treeview .toggle-icon:selected {
+    border-color: lightgray;
+}
+
+/* End */
+
+box {
+background-color: @main_color;
+}
+
+
+grid {
+background-color: @canvas_col;
+}
+
+separator {
+background-color: @main_color;
+}
+
+
+menu {
+background-color: @main_color;
+}
+
+
+header {
+background-color: @main_color;
+}
+
+
+tabs {
+    background-color: #eaeaea;
+}
+    
+stack {
+background-color: @main_color;
+}
+
+GimpSpinScale {
+background-color: @main_color;
+}
+
+menu menuitem:hover,
+.menu menuitem:hover {
+     background-color: @layer_selcol;
+}
+
+toolbutton {
+background-color: @main_color;
+}
+
+@define-color theme_selected_bg_color #d93a31;
+
+
+menubar {
+background-color: @menubarcol;
+}
+
+
+/*************/
+/* SCROLLBAR */
+/*************/
+
+
+scrollbar {
+    background: none;
+    background-image: none;
+    border-image: none;
+    min-width: 01.px;
+    min-height: 0.1px;
+    background-color: @scrollbar_col;
+    transition: 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin: 0px;
+    padding: 0px;
+}
+
+scrollbar:backdrop {
+    background-color: @scrollbar_col;
+    border-color: @scrollbar_col;
+    transition: 200ms ease-out;
+}
+scrollbar slider {
+    min-width: 9px;
+    min-height: 9px;
+    border-radius: 20px;
+    background-color: @scrollbarbg_col;
+}
+
+checkbutton {
+
+color: @texnicon;
+
+}
+
+button {
+color: @texnicon;
+background-color: @main_color;
+
+}
+
+
+GimpDock {
+
+color: @texnicon;
+
+
+}
+
+
+/************/
+/* TOOLBAR */
+/************/
+
+
+
+toolbutton > button {
+    transition:all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius:3px;
+    padding:7px 1px;
+
+}
+
+toolbutton > button:checked:hover {
+    transition:all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border:1px solid;
+    border-radius:3px;
+    padding:1px 1px;
+
+}
+
+toolbutton > button:checked {
+    transition:all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border:1px solid;
+    border-radius:1px;
+    padding:2px 2px;
+    border-width: 0 0 0 2.5px;
+    border-color: @slider_col1;
+
+}
+
+
+toolbutton > button,
+toolbutton > button:hover,
+toolbutton > button:checked,
+toolbutton > button:checked:hover {
+    min-height:10px;
+    min-width:10px;
+    padding:4px 4px;
+}
+
+
+
+
+/************/
+/* COMBOBOX */
+/************/
+
+
+
+combobox button {
+    color:@texnicon;
+    background-image: none;
+    border-image: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+
+combobox button:hover {
+    color:@texnicon;
+    border-color:@border_col;
+    background-color:@texnicon;
+    background-image: none;
+    border-image: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+combobox button:disabled {
+    color: @texnicon;
+    border-color:@border_col;
+    background-color:#1f1f1f;
+    background-image: none;
+    border-image: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+
+
+combobox button:active,
+button:checked {
+    transition:all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border:1px solid;
+    border-radius:3px;
+    color: alpha(@color_0002, 0.9);
+    border-color:#3e3e3e;
+    background-color:@toolboxcol;
+    background-image: none;
+    border-image: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+combobox button.suggested-action:not(:disabled) {
+    color:@color_0063;
+    background-color:@color_0033;
+    background-image: none;
+    border-image: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+combobox button.suggested-action:not(:disabled):hover {
+    background-color:@color_0034;
+    background-image: none;
+    border-image: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+combobox button,
+combobox button:active,
+combobox button:checked,
+combobox button:disabled,
+combobox button:hover {
+    min-height:4px;
+    min-width:4px;
+}
+
+
+/* SEPARATOR */
+
+separator.wide {
+    min-width:1px;
+    min-height:12px;
+    background-color: @separator;
+    background-size:0px 0px, 0px 0px;
+    box-shadow: none;
+    border: 0;
+}
+separator.wide:hover {
+    background-color: @separator;
+    box-shadow: none;
+    border: 0;
+}
