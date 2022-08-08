@@ -5,46 +5,61 @@
 /* Color */
 /* If you want to chnage the theme color the just chnage hex value of this code below */
 
-@define-color main_color #161925;
+@define-color main_color #1b1c20;
 
 /* if you want to chnage Slider gradiant color then chnage the hex value of both of the color hex below */
 /* slider selection colors are gradiant, so change both colors if you want a gradiant effect, and if you want it to be a single color, set the same hex value on both. */
 
 
-@define-color slider_col1 #006dca;
-@define-color slider_col2 #1992e6;
+@define-color slider_col1 #c2fb57;
+@define-color slider_col2 #7bff78;
 
 /* Layer slection color */
 /* Layer selection colors are gradiant, so change both colors if you want a gradiant effect, and if you want it to be a single color, set the same hex value on both. */
 
-@define-color layer_selcol #0085ff;
-@define-color layer_selcol2 #00c0ff;
+@define-color layer_selcol #24262a;
+@define-color layer_selcol2 #212326;
 
 
 /* Canvas color */
 
-@define-color canvas_col #070a19;
+@define-color canvas_col #141518;
 
+
+/* Scrollbar BG color */
+
+@define-color scrollbar_col #1b1c20;
 
 /* Scrollbar color */
 
-@define-color scrollbar_col #161925;
-
-/* Scrollbar Background color */
-
-@define-color scrollbarbg_col #3d404d;
+@define-color scrollbarbg_col #222427;
 
 /* Border color */
 
-@define-color border_col #2c3354;
+@define-color border_col #1f2027;
 
 
 /* Ruler color (Bg = background) */
 
-@define-color ruler_col #848796;
-@define-color rulerbg_col #1f222e;
+@define-color ruler_col #5b5b68;
+@define-color rulerbg_col #1b1c20;
 
 
+/* Menu Bar Color */
+
+@define-color menubarcol #17161d;
+
+/* Tool Slected tool Color */
+
+@define-color toolboxcol #1b1b22;
+
+/* SEPARATOR Color */
+
+@define-color separator #23232a;
+
+
+
+/* ALL */
 
 * {
     -gtk-icon-style:                   symbolic;
@@ -194,6 +209,32 @@ GimpSpinScale button {
     padding: 0 1px 0 1px;
 }
 
+
+GimpSpinScale entry progress {
+    margin: 2px -6px;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 2;
+    border-width: 0 0 2.6px;
+    border-color: @slider_col1;
+    border-style: solid;
+    box-shadow: none; }
+    spinbutton:not(.vertical) progress:backdrop,
+    entry progress:backdrop {
+      background-color: transparent; }
+  .linked:not(.vertical) > spinbutton:focus:not(.vertical) + spinbutton:not(.vertical), .linked:not(.vertical) > spinbutton:focus:not(.vertical) + button, .linked:not(.vertical) > spinbutton:focus:not(.vertical) + combobox > box > button.combo, .linked:not(.vertical) >
+  entry:focus + spinbutton:not(.vertical), .linked:not(.vertical) >
+  entry:focus + button, .linked:not(.vertical) >
+  entry:focus + combobox > box > button.combo, .linked:not(.vertical) > spinbutton:focus:not(.vertical) +
+  entry, .linked:not(.vertical) >
+  entry:focus +
+  entry {
+    border-left-color: @slider_col1; 
+}
+
+/* End */
+
+
 entry.italic {
     font-style: italic;
 }
@@ -201,6 +242,7 @@ entry.italic {
 .grid {
     background-color: @main_color;
 }
+
 
 /************/
 /* TREEVIEW */
@@ -285,7 +327,7 @@ background-color: @main_color;
 
 menu menuitem:hover,
 .menu menuitem:hover {
-     background-color: #3254b1;
+     background-color: @layer_selcol;
 }
 
 toolbutton {
@@ -296,7 +338,7 @@ background-color: @main_color;
 
 
 menubar {
-background-color: @main_color;
+background-color: @menubarcol;
 }
 
 
@@ -370,6 +412,18 @@ toolbutton > button:checked:hover {
     padding:1px 1px;
 
 }
+
+toolbutton > button:checked {
+    transition:all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border:1px solid;
+    border-radius:1px;
+    padding:2px 2px;
+    border-width: 0 0 0 2.5px;
+    border-color: @slider_col1;
+
+}
+
+
 toolbutton > button,
 toolbutton > button:hover,
 toolbutton > button:checked,
@@ -430,7 +484,7 @@ button:checked {
     border-radius:3px;
     color: alpha(@color_0002, 0.9);
     border-color:#3e3e3e;
-    background-color:#1f1f1f;
+    background-color:@toolboxcol;
     background-image: none;
     border-image: none;
     box-shadow: none;
@@ -461,78 +515,18 @@ combobox button:hover {
 }
 
 
-separator {
-    background-color: @main_color;
+/* SEPARATOR */
 
-}
-    
 separator.wide {
-        min-width:1px;
-        min-height:12px;
-        background-color: #1d1d1d;
-        background-size:0px 0px, 0px 0px;
-        box-shadow: none;
-        border: 0;
-}
-
-separator.wide:hover {
-        background-color: #2c2c2c;
-        box-shadow: none;
-        border: 0;
-}
-
-
-/* entry */
-
-entry.italic {
-    font-style: italic;
-}
-
-entry {
-    min-height:1px;
-    border:1px solid;
-    padding:1px 8px;
-    caret-color:#7251cf;
-    border-radius:2px;
-    transition:all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    color:#7251cf;
-    border-color:#38393e;
-    background-color: #161925;
-    background-image: none;
-    border-radius: 3px;
-}
-entry:focus,
-entry:active {
-    background-clip:border-box;
-    color:@color_0002;
-    border-radius: 0;
-    background-color: #161925;
-    border: 2px;
-    border-color: #4a4b50;
-    box-shadow:inset 1px 0 @color_0020, inset -1px 0 @color_0020, inset 0 1px @color_0020, inset 0 -1px @color_0020;
-}
-entry:disabled {
-    color:@color_0005;
-    border-color:@color_0006;
-    background-color:@color_0007;
-    border-radius: 2px;
-}
-entry selection {
-    background-color:#009eff;
-    color:#b2a8cf;
-    border-radius: 2px;
-}
-entry selection:disabled,
-entry selection:backdrop:disabled {
-    background-color:@color_0010;
-}
-
-entry:disabled progress {
-    border-radius:2px;
-    border-color:@color_0011;
-    border-style:solid;
-    background-image: none;
-    background-color:@color_0011;
+    min-width:1px;
+    min-height:12px;
+    background-color: @separator;
+    background-size:0px 0px, 0px 0px;
     box-shadow: none;
+    border: 0;
 }
-
+separator.wide:hover {
+    background-color: @separator;
+    box-shadow: none;
+    border: 0;
+}
