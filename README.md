@@ -1,6 +1,23 @@
 # GIMP-3-Themes
 
 
+Black Blue Glow
+
+![Black Blue Glow](https://user-images.githubusercontent.com/100540808/183414953-6d9208ce-c23c-4aff-bfff-8f74bc9c8ada.png)
+
+Modarn white
+
+![Modarn white](https://user-images.githubusercontent.com/100540808/183414981-22ec1bc5-b8f7-4889-ba22-ed463e313abf.png)
+
+Black Green
+
+![Black Green](https://user-images.githubusercontent.com/100540808/183415019-ae3dd72f-5cdd-4126-8bb1-bc9eee8b1f3e.png)
+
+Black Blue Glow
+
+![Black Blue Glow](https://user-images.githubusercontent.com/100540808/183415093-d2dd97da-bc0e-463f-80d9-8af536fa1b09.png)
+
+
 Dark Blue v2
 
 ![image](https://user-images.githubusercontent.com/100540808/182626796-11160736-38b3-4d91-9a60-1a3bfc33ace0.png)
