@@ -1,5 +1,8 @@
 # GIMP-3-Themes
 
+Win Dark
+
+![image](https://user-images.githubusercontent.com/100540808/183642422-2fe30243-6ea9-49d6-b58a-578dea578711.png)
 
 Black Blue Glow
 
@@ -57,7 +60,7 @@ Photoshop Black
 
 
 
-<h3 style="text-align: left;">&nbsp;How To Install</h3>
+<h2 style="text-align: left;">&nbsp;How To Install</h2>
 
 
 First, download the latest released GIMP 3 theme file (GIMP-3-Themes-main.rar) or download the whole codebase.
