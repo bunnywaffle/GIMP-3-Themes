@@ -41,8 +41,8 @@
 
 /* Ruler color (Bg = background) */
 
-@define-color ruler_col #3d3d3d;
-@define-color rulerbg_col #272727;
+@define-color ruler_col #38393e;
+@define-color rulerbg_col #232323;
 
 
 
@@ -143,6 +143,21 @@ buttonbox button{
     
 }
 
+
+/* Slider bg button */
+
+GimpSpinScale button {
+
+    border: .1px solid #989ba0;
+    
+}
+    
+GimpSpinScale entry {
+    
+    border: .1px solid #989ba0;
+    
+    
+}
 
 
 
