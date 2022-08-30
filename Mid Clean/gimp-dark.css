@@ -1,0 +1,19 @@
+@import url("../Default/gimp-dark.css");
+
+* {
+  -GimpToolPalette-tool-icon-size: small-toolbar;
+}
+
+toolpalette button {
+  padding: 5px;
+}
+
+button, tab {
+  padding: 0px;
+}
+
+scrollbar slider {
+  background: #3e3e3e;
+  border: .1px solid #4c4c4c;
+}
+
