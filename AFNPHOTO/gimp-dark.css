@@ -5,7 +5,7 @@
 /* Color */
 /* If you want to change the theme color the just chnage hex value of this code below */
 
-@define-color main_color #333333;
+@define-color main_color #323332;
 
 /* if you want to change Slider gradiant color then chnage the hex value of both of the color hex below */
 /* slider selection colors are gradiant, so change both colors if you want a gradiant effect, and if you want it to be a single color, set the same hex value on both. */
@@ -260,7 +260,7 @@ GimpSpinScale button:hover,
 
     transition:all 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     color: #989ba0;
-    background: #2f2f2f;
+    background: #272727;
     border-color: #989ba0;
     margin-left: 1;
     margin-right: 1;
@@ -421,7 +421,7 @@ box button label {
 
 
 separator {
-background-color: @main_color;
+background-color: #1d1d1d;
 }
 
 /************/
