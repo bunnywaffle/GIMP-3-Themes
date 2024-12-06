@@ -1,0 +1,1071 @@
+/* GIMP theme css file */
+
+* {
+    -gtk-icon-style:                   symbolic;
+    -GimpDockWindow-default-height:    300;
+    -GimpMenuDock-minimal-width:       200;
+    -GimpDockWindow-menu-preview-size: button;
+    -GimpToolPalette-tool-icon-size:   small-toolbar;
+    -GimpToolPalette-button-relief:    none;
+    -GimpDock-tool-icon-size:          small-toolbar;
+    -GimpDockbook-tab-icon-size:       button;
+    -GimpColorNotebook-tab-icon-size:  button;
+    -GimpDockable-content-border:      1;
+    -GimpEditor-content-spacing:       1;
+    -GimpEditor-button-spacing:        1;
+    -GimpEditor-button-icon-size:      menu;
+    -GimpDataEditor-minimal-height:    60;
+    -GtkDialog-content-area-border:    0;
+    -GtkDialog-button-spacing:         1;
+    -GtkDialog-action-area-border:     8;
+    -GimpUnitComboBox-appears-as-list: 0;
+}
+
+
+
+/* Hint for debugging themes:
+ * first enable the GTK inspector with
+   gsettings set org.gtk.Settings.Debug enable-inspector-keybinding true
+ * then (after restarting GIMP) call it up with ctrl+shift+i
+ * or from GIMP's UI: File > Debug > Start GtkInspector
+ */
+
+/* Basic foreground, background and border colors. */
+@define-color fg-color               rgb(200,200,200);
+@define-color bg-color               rgb(40,40,40);
+@define-color border-color           rgb(60,60,60);
+
+/********* Variants for foreground colors *********/
+
+/* In places where we want not as strongly contrasted text. */
+@define-color dimmed-fg-color        rgb(155,155,155);
+/* Disabled items, such as disabled actions in menus. */
+@define-color disabled-fg-color      rgb(145,145,145);
+/* Disabled buttons are dimmed even more (text needs to still be
+ * readable, but buttons design are usually enough. */
+@define-color disabled-button-color  rgb(100,100,100);
+
+/********* Variants for background colors *********/
+
+/* Background color for hovered items to "stick out". */
+@define-color hover-color            rgb(100,100,100);
+/* Background color when we want widgets-in-widgets to differenciate. It
+ * will usually be "less extreme", i.e. darker on a light theme, or
+ * lighter on a dark theme.
+ */
+
+
+@define-color sap            rgb(30,30,30);
+
+
+@define-color border            rgb(30,30,30);
+
+
+@define-color canva            rgb(30,30,30);
+
+
+@define-color slider         rgb(60,60,60);
+
+
+@define-color fg2-color     rgb(150,150,150);
+
+
+@define-color widget-bg-color        rgb(42,42,42);
+/* Color for selected items, in particular when their usual background
+ * color is @widget-bg-color or @bg-color. It will usually be ligher on
+ * a light theme, or darker on a dark theme.
+ */
+@define-color selected-color         rgb(40,40,40);
+
+/* Background color more extreme in the theme tendency, i.e. darker on a
+ * dark theme, ligther on a light theme. */
+@define-color extreme-bg-color       rgb(30,30,30);
+/* Color for a selected item to "stick out" when @extreme-bg-color is
+ * used. It will usually be darker than @bg-color on a light theme,
+ * lighter on a dark theme.
+ */
+@define-color extreme-selected-color rgb(50,50,50);
+
+/********* Variants for border colors *********/
+
+@define-color strong-border-color    rgb(20,20,20);
+@define-color stronger-border-color  rgb(75,75,75);
+/* Border color for the edge of certain widgets. This needs
+ * to be dark on light theme and very dark on dark themes */
+@define-color edge-border-color      rgb(20,20,20);
+
+
+/********* Colors for special cases *********/
+
+@define-color scrollbar-slider-color rgba(44,44,44, 0.2);
+@define-color scrollbar-trough-color rgba(60,60,60, 0.2);
+
+@define-color ruler-color            rgb(35,35,35);
+
+
+
+GimpToolDialog {
+    -GtkDialog-action-area-border: 1;
+}
+
+GimpColorNotebook tab {
+    padding: 0 0 0 0;
+}
+
+GimpDock entry,
+GimpDock spinbutton,
+GimpDock GimpColorNotebook spinbutton,
+GimpDock GimpColorNotebook spinbutton entry,
+GimpDock GimpColorScales spinbutton,
+GimpDock GimpColorScales spinbutton entry {
+    min-height: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+GimpColorSelection ColorselCmyk {
+    padding: 2px 2px 2px 2px;
+}
+
+GimpColorHistory button {
+    padding: 3px 3px 3px 3px;
+}
+
+#gimp-color-tag-box button {
+    padding: 4px 6px 4px 6px;
+}
+
+tab GimpFgBgView {
+    padding: 6px 6px 6px 6px;
+}
+
+GimpFgBgEditor:active {
+    border-width: 1px 1px 1px 1px;
+}
+
+GimpDock notebook tab {
+    padding: 0 0 0 0;
+}
+
+GimpDock :not(toolbutton) > button,
+GimpOverlayDialog button,
+GimpToolDialog :not(headerbar) button,
+GimpTextStyleEditor button {
+    padding: 0px 2px 0px 2px;
+}
+
+GimpToolDialog headerbar {
+    min-height: 0;
+}
+
+GimpDock frame {
+    -GimpFrame-label-bold:       0;
+    -GimpFrame-label-spacing:    2;
+}
+
+GimpDisplayShell grid > button {
+    min-height: 0;
+    min-width: 0;
+    padding: 0 0 0 0;
+}
+
+GimpDisplayShell progressbar trough,
+GimpDisplayShell progressbar progress {
+    min-height: 1em;
+}
+
+GimpFileDialog progressbar trough,
+GimpFileDialog progressbar progress {
+    min-width: 1px; /* hack */
+    min-height: 1em;
+}
+
+spinbutton entry {
+    border-radius: 3px;
+}
+
+GimpSpinScale entry {
+    /* Important: prevent overhigh spin scale */
+    min-height: 16px;
+}
+
+GimpSpinScale entry progress {
+    background-color: @theme_selected_bg_color;
+    border-width:     0px;
+    border-radius:    3px;
+}
+
+GimpSpinScale button {
+    /* Makes the +- buttons a bit more compact. */
+    padding: 0 1px 0 1px;
+}
+
+entry.italic {
+    font-style: italic;
+}
+
+tooltip decoration {
+  box-shadow: 0px 0px;
+}
+
+treeview header button {
+    padding: 6px;
+}
+
+treeview .toggle-icon:not(.visible):hover {
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+treeview .toggle-icon:not(.visible):selected {
+    border-color: lightgray;
+}
+
+/* A set of interface style definitions common to light and dark theme variants for GIMP 3.0
+ * The specific dark and light interface styles are defined in common-light.css, common-dark.css */
+
+/* The specific dark and light colors are defined in gimp-dark.css, gimp.css */
+
+/* Do not import this file directly from gimp.css or gimp-dark.css files, you will miss light/dark theme specific styles.
+ * Do import matching common-[dark,light].css */
+
+
+/* Hint for debugging themes:
+ * first enable the GTK inspector with
+   gsettings set org.gtk.Settings.Debug enable-inspector-keybinding true
+ * then (after restarting GIMP) call it up with ctrl+shift+i
+ * or from GIMP's UI: File > Debug > Start GtkInspector
+ */
+
+
+ * {
+   /* Default text color; needed for e.g. the Prefs dialog title area,
+    * which doesn't have any more specific way to style it.
+    */
+   color: @fg-color;
+ }
+ 
+ *:disabled {
+   color: @disabled-fg-color;
+ }
+ 
+ #image-menubar, GtkImageMenuItem {
+   background-color: @bg-color;
+   color: @fg-color;
+ }
+ 
+ /* TreeViews, e.g. in a file picker or the Prefs dialog */
+ .view {
+   background-color: @extreme-bg-color;
+   color: @fg-color;
+ }
+ 
+ /* Selected items in a treeview list. */
+ .view:selected {
+   background-color: @extreme-selected-color;
+   color: @fg-color;
+ }
+ 
+ .view:disabled {
+   color: @disabled-fg-color;
+ }
+ 
+ /* Selected text in a treeview cell (e.g. layer name in edition mode). */
+ .view selection {
+   background-color: @fg-color;
+   color: @bg-color;
+ }
+ 
+ .view header button {
+   background-color: @bg-color;
+   border: 1px solid @stronger-border-color;
+ }
+ 
+ /* Define the mouse-over color for the path
+  * buttons in the various file dialogs.
+  */
+ #pathbarbox button:hover {
+   background-color: @hover-color;
+ }
+ 
+ /* The main image window before it has an image in it,
+  * and the buttonbar along the bottoms of dialogs.
+  * Foreground color here is the text color, not the Wilber color.
+  * background-color and background here are ignored.
+  */
+ GimpDisplayShell, GimpDock, .dialog-action-box, .dialog-vbox {
+   color: @dimmed-fg-color;
+ }
+ 
+ /* Prevent system theme leak that adds a border around
+  * the toolbox Wilber */
+ GimpDock frame border {
+   background-image: none;
+ }
+ 
+ /* Foreground color for the big Wilber in the empty image window.
+  * Again, background-color and background here are ignored.
+  */
+ gimp-canvas {
+   background-color: aquamarine;
+ }
+ 
+ /* Prevent system theme leak that affects the color of the
+  * main canvas and some widget containers  */
+ stack {
+   background-image: none;
+ }
+ 
+ /* GtkTextView */
+ textview text, textview {
+   background-color: @extreme-bg-color;
+   color: @fg-color;
+ }
+ /* End GtkTextView */
+ 
+ combobox window.popup, combobox window {
+   background-image: none;
+   background-color: @widget-bg-color;
+   color: @fg-color;
+ }
+ 
+ combobox box, combobox box.linked, combobox button {
+   color: @fg-color;
+   background-image: none;
+   border-color: @stronger-border-color;
+ }
+ 
+ /* Remove "corners" around the combo boxes */
+ combobox box, combobox box.linked {
+   background-color: transparent;
+ }
+ 
+ combobox button {
+   background-color: @widget-bg-color;
+ }
+ 
+ combobox arrow, combobox button * {
+   -gtk-icon-shadow: none;
+ }
+ 
+ /* Define colors so the nib handle appears in Gimp Ink Options */
+ GimpBlobEditor {
+   color: @fg-color;
+   background-color: @bg-color;
+   border: 0.1em solid @fg-color;
+ }
+ 
+ /* Get rid of the outline around all tabs in the gimpcolordialog */
+ GimpColorNotebook .frame {
+   border-color: @bg-color;
+ }
+ 
+ /* Color history buttons in the color chooser.
+  * The selector GimpColorHistory button gets the color buttons
+  * but not the + button; GimpColorSelection gets both.
+  */
+ GimpColorSelection button {
+   background: @widget-bg-color;
+   border: 0px solid @stronger-border-color;
+   color: @fg-color;
+ }
+ 
+ GimpColorSelection button:hover {
+   background: @hover-color;
+ }
+ 
+ /* The tabs above the color selector */
+ notebook stack {
+   background-color: @bg-color;
+ }
+ 
+ notebook header {
+   background-color: @bg-color;
+   border-color: @edge-border-color;
+ }
+ 
+ notebook header button {
+   box-shadow: none;
+ }
+ 
+ /* Use this to make a border or padding around each tab */
+ notebook header tabs tab {
+   background-color: @bg-color;
+   background-image: none;
+   border: 1px solid @strong-border-color;
+   box-shadow: none;
+   margin-left: 2px;
+   margin-right: 2px;
+   min-width: 30px;
+   min-height: 30px;
+   padding: 1px;
+ }
+ 
+ /* The underline for selected tabs */
+ notebook header tabs tab:checked {
+   background-color: @selected-color;
+   box-shadow: 0 -4px @stronger-border-color inset;
+ }
+ 
+ notebook header tabs tab:hover {
+   background-color: @hover-color;
+ }
+ 
+ /* Add margin to image tabs so the close button fits */
+ notebook header tabs tab > box > button
+ {
+   margin-right: 5px;
+ }
+ 
+ /* The Close button on image tabs */
+ .reorderable-page button {
+   background-color: transparent;
+ }
+ 
+ /* The background of many dialogs, e.g. Preferences and gimpcolordialog */
+ .vertical {
+   color: @fg-color;
+   background-color: @bg-color;
+   background-image: none;
+ }
+ 
+ /* Background for many button bars and dialog titles.
+  * Also, unexpectedly, controls the prefs "Reload Current Theme" button content.
+  *
+  * Warning: setting a background-color here "breaks" the marks added by
+  * gtk_scale_add_mark() on a GtkScale. I'm still unsure why, but the conclusion
+  * is probably that it's a bad idea to set too broad background-color rules.
+  */
+ .horizontal {
+   color: @fg-color;
+ }
+ 
+ /* Text buttons, e.g. the main buttons at the bottoms of dialogs,
+  * 0..100 and 0..255 at the top of gimpcolordialog,
+  * where they're inside a GimpColorSelection
+  */
+ .text-button {
+   color: @fg-color;
+   background-color: @widget-bg-color;
+   background-image: none;
+   font-weight: normal;
+ }
+ 
+ .text-button:hover {
+   background-color: @hover-color;
+ }
+ 
+ /* .flat covers the tool buttons and the buttons at the bottom
+  * of the Toolbox window.
+ */
+ 
+ toolbutton button.flat {
+   background-color: @bg-color;
+   color: @fg-color;
+ }
+ 
+ toolbutton button.flat:hover {
+   background: @selected-color;
+   border: 1px solid @edge-border-color;
+ }
+ 
+ toolbutton button.flat:checked,
+ toolbutton button.flat:checked:hover,
+ .image-button:hover, viewport button:hover {
+   background: @selected-color;
+ }
+ 
+ /* Visual indication of clicking an already
+  * selected button
+  */
+ toolbutton button.flat:checked:active:hover {
+   background-color: @hover-color;
+   border-color: @hover-color;
+ }
+ 
+ /* Style for GtkToolBar, primarily used in plug-ins
+  * with toolbars like Image Map and Animation Play */
+ toolbar {
+   background-color: @widget-bg-color;
+ }
+
+ treeview {
+  background-color: @main_color;
+  }
+  
+  treeview header button {
+      padding: 6px;
+  }
+  
+  treeview .toggle-icon:not(.visible):hover {
+      border: 1px solid gray;
+      border-radius: 3px;
+  }
+  
+  treeview .toggle-icon:not(.visible):selected {
+      border-color: lightgray;
+  }
+  
+  treeview.view:selected,
+  treeview.view:selected:focus {
+      background-image: -gtk-gradient (linear, left top, right top,
+                                           from (@layer_selcol),
+                                           to (@layer_selcol2));
+      border-radius: 0;
+  }
+  
+  box {
+  background-color: @main_color;
+  }
+  
+  
+  grid {
+  background-color: @main_color;
+  }
+  
+  /* Gimp canvas */
+  
+  
+  GimpDisplayShell grid {
+  
+      background-color: @canva;
+  
+      
+  } 
+   
+
+  /* Ruler */
+
+  GimpRuler {
+
+    color: @fg2-color;
+       
+   }
+
+ 
+ /* Prevent overly thick border around image buttons */
+ .image-button image, button image {
+   -gtk-icon-shadow: 0 0 transparent;
+ }
+ 
+ /* Color the toolbox Wilber icon */
+ GimpDock frame:first-child:not(label) {
+   color: @dimmed-fg-color;
+ }
+ /* Fix an issue with a few labels in the toolbox
+  * having their colors overwritten with Wilber's
+  */
+ GimpDock frame:first-child label {
+   color: @fg-color;
+ }
+ 
+ /* Defining slider scale border and trough */
+ scale contents trough
+ {
+   border-color: @strong-border-color;
+   background-color: @ruler-color;
+ }
+ 
+ scrollbar {
+   background-color: @bg-color;
+   border-color: @border-color;
+ }
+ 
+ /*
+ Worth trying for always-visible scrollbar:
+ https://stackoverflow.com/questions/52414202/gtkscrolledwindow-how-to-always-show-the-overlay-scrollbar
+ Doesn't seem to work here, though.
+  */
+ scrollbar trough {
+   background: @scrollbar-trough-color;
+ }
+ 
+ scrollbar slider {
+   background: @scrollbar-slider-color;
+   border: 2px solid @border-color;
+ }
+ 
+ scrolledwindow {
+   border-color: @edge-border-color;
+ }
+ 
+ /* Removes black border around scrolled windows */
+ scrolledwindow viewport grid, scrolledwindow viewport box {
+   border-radius: 1px;
+   border: 0px solid @bg-color;
+ }
+ 
+ /* Defining background color for About Dialog credits box */
+ .gimp-about-dialog box box stack scrolledwindow viewport grid {
+   background-color: @extreme-bg-color;
+ }
+ 
+ GimpRuler {
+   background-color: @ruler-color;
+ }
+ 
+ /* Make sure the sample point numbers are visible */
+ GimpSamplePointEditor box.vertical {
+   background-color: transparent;
+ }
+ 
+ entry {
+   background-color: @extreme-bg-color;
+   color: @fg-color;
+ }
+ 
+ entry selection {
+   background-color: @fg-color;
+   color: @bg-color;
+ }
+ 
+ 
+ paned menu separator {
+     padding: 0px;
+ }
+ 
+ .view button {
+   background-color: @bg-color;
+   border-color: @border-color;
+   color: @fg-color;
+ }
+ 
+ button {
+   background-image: none;
+   background-color: @bg-color;
+   text-shadow: 0 0;
+ }
+ 
+ /* Handle both buttons drawn directly and drawn with an icon. */
+ button:disabled, button:disabled image {
+   color: @disabled-button-color;
+ }
+ 
+ /* E.g. the currently active action of a dialog will slightly stand out so that
+  * people know what action is activated when they will just hit Enter.
+  */
+ button.default {
+   border: 1px solid shade(@fg-color, 0.7);
+ }
+ 
+ button:not(.flat)
+ {
+   border-color: @edge-border-color;
+ }
+ 
+ /* Styling for dockable dialog footer buttons */
+ button.titlebutton
+ {
+   border-color: transparent;
+   box-shadow: none;
+ }
+ 
+ button:checked, button.titlebutton:hover {
+   background: @selected-color;
+   border-color: @edge-border-color;
+ }
+ 
+ /* This is the default active action, the somehow "suggested" action. Usually it
+  * means this is either the expected next step action (e.g. activating a
+  * filter), or else the less destructive action (e.g. when closing an unsaved
+  * image, the default is "Cancel").
+  */
+ button.suggested-action {
+   border: 1px solid shade(@fg-color, 0.8);
+ }
+ 
+ /* The "destructive" action will be for instance the "Delete Layer"
+  * button when pasting as floating data.
+  */
+ button.destructive-action {
+   border: 1px dashed shade(@fg-color, 0.8)
+ }
+ 
+ /* Spinbuttons: there are two kinds:
+  * spinbutton, spinbutton button
+  *   e.g. the "width" field in the New Image dialog.
+  *   spinbutton button.down, spinbutton button.up can be styled separately,
+  *   as can spinbutton entry.
+  *
+  * GimpSpinScale also has button.up, button.down and entry under it,
+  *   plus GimpSpinScale entry progress.
+  *
+  * Mostly the inherited values seem pretty good for both of these,
+  * so they're not overridden.
+  */
+ 
+ spinbutton, entry {
+   /* Borders are a bit darker, but not too dark. */
+   border-color: @strong-border-color;
+ }
+ 
+ spinbutton
+ {
+   background-image: none;
+   background-color: @bg-color;
+ }
+ 
+ /* Styling for the +/- buttons */
+ spinbutton button.up, spinbutton button.down {
+   background-color: @bg-color;
+   -gtk-icon-shadow: none;
+ }
+ 
+ GimpSpinScale entry progress {
+   background-color: @extreme-selected-color;
+   border-width:     0px;
+   border-radius:    3px;
+ }
+ 
+ GimpSpinScale button
+ {
+   border-color: @border-color;
+   -gtk-icon-shadow: none;
+ }
+ 
+ /* Checkboxes */
+ checkbutton, checkbutton.text-button, radiobutton, radiobutton.text-button, checkbutton label {
+   color: @fg-color;
+   background-color: @bg-color;
+ }
+ 
+ checkbutton:hover, checkbutton.text-button:hover, checkbutton:hover label, radiobutton:hover, checkbutton label:hover {
+   color: @fg-color;
+   background-color: @hover-color;
+ }
+ 
+ checkbutton check, radiobutton radio, treeview.view check {
+   background-image: none;
+   background-color: @extreme-bg-color;
+   border: 1px solid @stronger-border-color;
+ }
+ 
+ checkbutton check:checked {
+   color: @fg-color;
+ }
+ 
+ checkbutton check:disabled {
+   color: @disabled-fg-color;
+   background-color: @bg-color;
+ }
+ 
+ checkbutton:checked label, radiobutton:checked label {
+   font-weight: bold;
+ }
+ 
+ /* Some plugins have radio buttons, e.g. Fractal Explorer */
+ radio {
+   background-image: none;
+   background-color: @extreme-bg-color;
+   border: 1px solid @stronger-border-color;
+   border-radius: 100%;
+   color: @fg-color;
+ }
+ 
+ /* Removes "blurred" effect from tooltip label */
+ tooltip {
+   background-color: @bg-color;
+   background-image: none;
+   border: 1px solid @edge-border-color;
+   text-shadow: 0 0;
+ }
+ 
+ tooltip box
+ {
+   background-color: @bg-color;
+   border: 0px solid @transparent;
+ }
+ 
+ /* Prevents flickering effect on some desktops */
+ tooltip decoration {
+   box-shadow: 0px 0px;
+ }
+ 
+ /* The border around a tooltip */
+ .background {
+   background-color: @bg-color;
+   border-color: @border-color;
+   border-width: 1px;
+ }
+ 
+ /* The border around a frame */
+ border {
+   border: 0.1px;
+ }
+ 
+ /* The border around GimpOffsetArea frame in resize dialogs */
+ .gimp-offset-area-frame {
+   border: solid 2px @stronger-border-color;
+   background-color: @widget-bg-color;
+ }
+ 
+ /* For dropdown menus (e.g. "px" when creating a new image */
+ #gtk-combobox-popup-menu {
+   background-color: @bg-color;
+   color: @fg-color;
+ }
+ 
+ /* Top menu items  */
+ 
+ /* give the menu bar a color, fix for the default color being too dark */
+ menubar {
+   background-color: @bg-color;
+   background-image: none;
+   box-shadow: 0 -1px @edge-border-color inset;
+ }
+ 
+ menuitem:hover, menuitem:selected
+ {
+   border: 0px solid transparent;
+ }
+ 
+ /* The top menu item itself: File, Edit ... */
+ menuitem menuitem {
+   color: @fg-color;
+   background: @extreme-bg-color;
+ }
+ 
+ /* A top (File, Edit) menubar item when its menu is expanded. */
+ menubar > menuitem:hover {
+   color: @fg-color;
+   background: @extreme-bg-color;
+ }
+ 
+ /* Top menubar subitem style */
+ menubar menu menuitem {
+   color: @fg-color;
+   background-color: @bg-color;
+ }
+ 
+ menubar menu menuitem:hover {
+   color: @fg-color;
+   background-color: @extreme-bg-color;
+ }
+ 
+ menuitem *:hover {
+   color: @fg-color;
+   background: @extreme-selected-color;
+ }
+ 
+ menuitem check {
+   border-color: @fg-color;
+ }
+ 
+ menuitem decoration
+ {
+   box-shadow: 0 1px 2px @edge-border-color;
+ }
+ 
+ /* "Add Tab" menu in dockable dialog */
+ menu {
+   background-color: @bg-color;
+ }
+ 
+ /* Fixes issue with top menu label not changing
+  * colors when highlighted
+  */
+ menu box {
+   background-color: transparent;
+ }
+ 
+ /* In some cases, the GtkSeparatorMenuItem-s get very ugly top/bottom margin
+  * with a different background color. Let's get rid of it.
+  */
+ menu separator {
+   background-color: @stronger-border-color;
+   margin: 0;
+ }
+ 
+ /* Defines the border around the Save Image actionbar options */
+ actionbar revealer box {
+   border-width: 0px;
+   border-top-width: 1px;
+   border-top-color: @strong-border-color;
+ }
+ 
+ /* Sidebar in File > Open */
+ 
+ /* The background to either side of the directory buttons.
+  * The color of the buttons themselves comes from somewhere else.
+  */
+ .sidebar-row, .sidebar-row * {
+   background-color: @widget-bg-color;
+ }
+ 
+ .sidebar-row:selected, .sidebar-row:selected * {
+   background-color: @selected-color;
+ }
+ 
+ .sidebar-row:hover, .sidebar-row:hover * {
+   background-color: @bg-color;
+ }
+ 
+ /* GtkListBox widgets */
+ 
+ list, list row {
+   background-color: @widget-bg-color;
+ }
+ 
+ list row:selected {
+   background-color: @selected-color;
+ }
+ 
+ list row:hover {
+   background-color: @hover-color;
+ }
+ 
+ /* GtkSwitch buttons */
+ 
+ switch {
+   background-color: @bg-color;
+   border: 1px solid @stronger-border-color;
+ }
+ 
+ /* The switch button is hard to understand without color.
+  * Let's indicate the checked state with foreground color.
+  */
+ switch:checked {
+   background-color: @fg-color;
+ }
+ 
+ /* This prevents the 1/0 labels from appearing inside the switch slider */
+ switch image {
+   color: transparent;
+ }
+ 
+ headerbar {
+   min-height: 36px;
+   background-color: @bg-color;
+   background-image: none;
+   border-color: @sap;
+   outline-color: @sap;
+   box-shadow: none;
+   border-radius: 10px;
+ }
+ 
+ headerbar:backdrop * {
+   color: @disabled-fg-color;
+ }
+ 
+ /* Prevent overlapping menu/header borderlines for CSD */
+ headerbar button.titlebutton, headerbar > menubar {
+   box-shadow: none;
+ }
+ 
+ .titlebar {
+   padding-top: 0px;
+   padding-bottom: 0px;
+ }
+
+
+
+
+toolbutton button {
+  border-radius: 4px;
+}
+
+spinbutton    button,
+GimpSpinScale button {
+  border-radius: 4px;
+}
+
+GimpSpinScale entry,
+spinbutton entry {
+  border-top-right-radius:    4px;
+  border-bottom-right-radius: 4px;
+} 
+
+/* Buttons, - +, overrides */
+spinbutton        button.up,
+dialog spinbutton button.up,
+GimpSpinScale     button.up {
+  border-top-right-radius:    4px;
+  border-bottom-right-radius: 4px;
+}
+
+
+
+
+
+paned separator {
+  color: @border-color;
+  background-image: none;
+  background-color: @border-color;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  padding: 1px;
+}
+
+
+
+
+menu separator {
+  background-color: @sap;
+  margin: 0;
+}
+
+
+separator.wide {
+  min-width:1px;
+  min-height:1px;
+  background-color: @sap;
+  background-size:0px, 0px, 0px 0px;
+  box-shadow: none;
+  border: 0px;
+}
+
+
+separator.wide:hover {
+  background-color: @sap;
+  box-shadow: none;
+  border: 0px;
+}
+
+
+
+separator {
+  background-color: @sap;
+  margin-top: -0.1em;
+  margin-bottom: -0.1em;
+  margin-left: -0.1em;
+  margin-right: -0.1em;
+
+}
+
+
+GimpSpinScale {
+  border-radius: 6px;
+  box-shadow:    0px 0.5px @slider;
+}
+
+GimpSpinScale entry {
+  padding:            0px 8px 0px 5px;
+  background-color:   @extreme-bg-color;
+  border-color:       @edge-border-color;
+  border-radius:      5px 0px 0px 5px;
+  border-right-width: 0px;
+  box-shadow:         none;
+}
+
+GimpSpinScale entry progress {
+  background-color: @slider;
+  border-width:     0px;
+  border-radius:    3px 0px 0px 3px;
+  margin:           0px -8px 0px -5px;
+}
+
+GimpSpinScale button {
+  -gtk-icon-shadow: none;
+  border-color:     @border-color;
+  border-radius:    0px 0px 0px 0px;
+  box-shadow:       0px 0.5px @stronger-border-color;
+}
+
+/* Round the right-side edge of the end button */
+GimpSpinScale button:nth-child(odd) {
+  border-left-width: 0px;
+  border-radius:     0px 2px 2px 0px;
+}
+
+
