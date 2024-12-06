@@ -75,7 +75,7 @@
  * color is @widget-bg-color or @bg-color. It will usually be ligher on
  * a light theme, or darker on a dark theme.
  */
-@define-color selected-color         rgb(40,40,40);
+@define-color selected-color         rgb(30,30,30);
 
 /* Background color more extreme in the theme tendency, i.e. darker on a
  * dark theme, ligther on a light theme. */
