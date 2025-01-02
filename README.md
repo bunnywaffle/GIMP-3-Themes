@@ -1,5 +1,8 @@
 # GIMP-3-Themes
 
+## Note: Only few theme are updated for modern  gimp, like Photoshop2, Dark Professional, Clean Dark, Clean Dark 2
+
+
 <h3 style="text-align: left;">Better AFN Photo
 
 
