@@ -1,6 +1,6 @@
 # GIMP-3-Themes
 
-## Note: Only a few themes are updated for modern GIMP, such as Photoshop2, Dark Professional, Clean Dark, and Clean Dark 2.
+## Note: Only a few themes are updated for modern GIMP, such as Photoshop2, Dark Professional, Clean Dark, Nocturnal, and Clean Dark 2.
 
 
 <h3 style="text-align: left;">Better AFN Photo
