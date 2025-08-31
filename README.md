@@ -10,6 +10,9 @@
 
 <img width="1918" height="1030" alt="image" src="https://github.com/user-attachments/assets/62b74641-e719-4807-af66-cd16e7cd2754" />
 
+### CLean Dark 2
+
+<img width="1918" height="1033" alt="image" src="https://github.com/user-attachments/assets/2577eacf-859c-497d-ba9e-4c83afaa0c00" />
 
 
 
