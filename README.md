@@ -1,6 +1,6 @@
 # GIMP-3-Themes
 
-## Note: Only a few themes are updated for modern GIMP, such as Photoshop2, Dark Professional, Clean Dark, Nocturnal, ExpDark, and Clean Dark 2.
+## Note: Only a few themes are updated for modern GIMP, such as Photoshop2, Dark Professional, Clean Dark, Nocturnal, ExpDark, Plasticity, and Clean Dark 2.
 
 ### Exp Dark
 
